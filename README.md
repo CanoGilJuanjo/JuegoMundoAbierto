@@ -12,5 +12,6 @@ Puedes explorar, matar enemigos e intentar sobrevivir el mayor tiempo posible, c
 
 ### 🎮 Controles
 
-Movimiento: ![alt text](img/controlesFlechas.png) | ![alt text](img/controlesTeclas.png)
-Abrir cajas: ![alt text](img/controlesE.png)
+Movimiento: <img src="img/controlesFlechas.png" width="5%" heigth="5%"> | <img src="img/controlesTeclas.png" width="5%" heigth="5%">
+>
+<p style="display: flex; justify-content: center;">Abrir cajas: <img src="img/controlesE.png" width="4%" heigth="5%"></p>
