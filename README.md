@@ -1,5 +1,6 @@
 > [!WARNING]
 > El juego DE MOMENTO esta en desarrollo hay cosas que no funcionan y otras que todavia no estan planteadas, voy a mi ritmo, poco a poco.
+
 > [!NOTE]
 > Tened en cuenta que como este juego esta hecho en HTML, CSS, JS y se esta ejecutando en el navegador, no va todo lo fluido que seria un juego normal ejecutandose en el ordenador.
 
