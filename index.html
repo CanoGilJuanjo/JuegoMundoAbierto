@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego ?</title>
+    <style>
+        body {
+            margin: 0;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #363636;
+            flex-direction: column;
+        }
+        /* Para aumentar la pantalla, aumentar el 10 del repeat */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 50px);
+            grid-template-rows: repeat(12, 50px);
+            border: 3px solid #333;
+            box-sizing: border-box;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        .grid-cell {
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            background-image: url(img/cesped.png);
+            background-size: cover;
+            transition: all 0.3s ease;
+            /* Sin margen ni espacio entre celdas */
+        }
+        .player-arriba{
+            background-color: yellowgreen;
+            background-image: url(img/player-arriba.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .player-derecha{
+            background-color: yellowgreen;
+            background-image: url(img/player-derecha.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .player-abajo{
+            background-color: yellowgreen;
+            background-image: url(img/player-abajo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .player-izquierda{
+            background-color: yellowgreen;
+            background-image: url(img/player-izquierda.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .caja{
+            background-image: url(img/caja.png);
+            background-color: yellowgreen;
+            background-size: cover;
+        }
+        .agua{
+            background-image: url(img/agua.gif);
+            background-size: cover;
+        }
+        .fila-cuadrados {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            width: 100%;
+        }
+        .cuadrado {
+            width: 50px;
+            height: 50px;
+            background: #ffffff8b;
+            border: 2px solid #000000;
+            border-right: none;
+            margin: 0; /* Sin separación */
+            box-sizing: border-box;
+        }
+        .cuadrado:last-child{
+            border-right: 2px solid #000000;
+        }
+        .enemigo{
+            background-color: red;
+            background-image: none;
+        }
+        .comida{
+            background-color: yellowgreen;
+            background-image: url(img/comida.png);
+            background-size: cover;
+        }
+        .arma{
+            background-color: yellowgreen;
+            background-image: url(img/arma.png);
+            background-size: cover;
+        }
+        .barra-progreso {
+            display: flex;
+            width: 300px;
+            height: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .segmento-rojo {
+            width: 3px;
+            height: 100%;
+            background-color: red;
+            margin-right: 1px;
+        }
+        
+        .segmento-amarillo {
+            width: 3px;
+            height: 100%;
+            background-color: yellow;
+            margin-right: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <div>
+            <div>
+                Vida
+                <div class="barra-progreso">
+                    <!-- 100 segmentos rojos -->
+                    <div class="segmento-rojo"></div><div class="segmento-rojo"></div><div class="segmento-rojo"></div>
+                    <!-- ... repite hasta 100 -->
+                </div>
+            </div>
+            <div>
+                Comida
+                <div class="barra-progreso">
+                    <!-- 100 segmentos amarillos -->
+                    <div class="segmento-amarillo"></div><div class="segmento-amarillo"></div><div class="segmento-amarillo"></div>
+                    <!-- ... repite hasta 100 -->
+                </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;
+        <h3>Tiempo: 00:00:00</h3>
+    </div>
+    <div class="grid-container" id="mapa">
+    </div>
+    <div class="fila-cuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    <div class="fila-numeros" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <div style="width: 50px; text-align: center; font-weight: bold; color: #ffffff;">1</div>
+        <div style="width: 50px; text-align: center; font-weight: bold; color: #ffffff;">2</div>
+        <div style="width: 50px; text-align: center; font-weight: bold; color: #ffffff;">3</div>
+        <div style="width: 50px; text-align: center; font-weight: bold; color: #ffffff;">4</div>
+        <div style="width: 50px; text-align: center; font-weight: bold; color: #ffffff;">5</div>
+    </div></div>
+    <script src="index.js"></script>
+</body>
+</html>
